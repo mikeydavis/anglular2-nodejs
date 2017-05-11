@@ -1,0 +1,10 @@
+"use strict";
+///<reference path="../../typings.d.ts"/>
+var platform_browser_dynamic_1 = require('@angular/platform-browser-dynamic');
+var http_1 = require('@angular/http');
+var app_component_1 = require("./app.component");
+platform_browser_dynamic_1.bootstrap(app_component_1.AppComponent, [
+    http_1.HTTP_PROVIDERS
+]);
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJvb3QudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUFBLHlDQUF5QztBQUN6Qyx5Q0FBMEIsbUNBQW1DLENBQUMsQ0FBQTtBQUM5RCxxQkFBK0IsZUFBZSxDQUFDLENBQUE7QUFDL0MsOEJBQTZCLGlCQUFpQixDQUFDLENBQUE7QUFFL0Msb0NBQVMsQ0FBQyw0QkFBWSxFQUFDO0lBQ25CLHFCQUFjO0NBQ2pCLENBQUMsQ0FBQyIsImZpbGUiOiJib290LmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8vPHJlZmVyZW5jZSBwYXRoPVwiLi4vLi4vdHlwaW5ncy5kLnRzXCIvPlxuaW1wb3J0IHsgYm9vdHN0cmFwIH0gZnJvbSAnQGFuZ3VsYXIvcGxhdGZvcm0tYnJvd3Nlci1keW5hbWljJztcbmltcG9ydCB7IEhUVFBfUFJPVklERVJTIH0gZnJvbSAnQGFuZ3VsYXIvaHR0cCc7XG5pbXBvcnQgeyBBcHBDb21wb25lbnQgfSBmcm9tIFwiLi9hcHAuY29tcG9uZW50XCI7XG5cbmJvb3RzdHJhcChBcHBDb21wb25lbnQsW1xuICAgIEhUVFBfUFJPVklERVJTXG5dKTsiXX0=
