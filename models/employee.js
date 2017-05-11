@@ -7,4 +7,4 @@ var schema = new Schema({
     position: {type: String, required: true}
 });
 
-module.exports = mongoose.model('Message',schema); //create collection Messages in mongodb
+module.exports = mongoose.model('Employee',schema); //create collection Employees in mongodb
