@@ -67,11 +67,6 @@ router.delete('/employee/:id',function(req,res,next){
     Employee.remove({_id:req.params.id}, function(err){
         if(err) throw err;
     });
-
-    // Employee.remove(req.params.id, req.body,function(err,post){
-    //     if(err) return next(err);
-    //     res.json(post);
-    // });
 });
 
 
