@@ -73,10 +73,7 @@ export class AppComponent implements OnInit  {
 
     onEdit(value){
         console.log(value);
-        Hero
-
-
-        
+    
     }
 
 }

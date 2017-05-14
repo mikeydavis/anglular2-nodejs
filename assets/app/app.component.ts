@@ -1,61 +1,57 @@
 
 import { Component, OnInit } from '@angular/core';
 import { Message } from "./message.model";
+import { Employee } from "./employee.model";
 import { MessageService } from "./message.service";
+import { EmployeeService } from "./employee.service";
 
 
 @Component({
     moduleId: module.id,
     selector: 'my-app',
     templateUrl: 'app.template.html',
-    providers: [MessageService]
+    providers: [EmployeeService]
 })
 export class AppComponent implements OnInit  {
     title = 'Angular 2 and Mongo DB';
 
-    employees = [
-        {name: "Mike Davis", position:"manager"},
-        {name: "Tanya", position:"manager"},
-        {name: "Harold", position:"designer"},
-    ];
+    constructor(private employeeService: EmployeeService){ }
 
-    constructor(private messageService: MessageService){ }
-
-    messages: Message[] = [];
-
+    employees: Employee[] = [];
 
     model:any={};
     msg:any="";
     
     addEmployee(){
 
-        const rnd = Math.ceil(Math.random() * 100);
-        const message = new Message('employee  name ',this.model.position );
-        this.messages.push(message);
-        this.messageService.saveMessage(message)
+        const employee = new Employee(this.model.name,this.model.position,'');
+        this.employees.push(employee);
+        this.employeeService.saveEmployees(employee)
             .subscribe(
                 () => console.log('Sucess'),
                 error => console.error(error)
             );
-        console.log('add');
-        this.employees.push(this.model);
-        this.model = {};
+            
         this.msg = "Successfully added";
     };
 
-    deleteEmployee(i){
-        console.log(i);
+    deleteEmployee(i,id){
+        console.log(id);
         this.employees.splice(i,1);
         this.msg = "Successfully deleted";
+        
+        this.employeeService.deleteEmployee(id)
+
     };
     employeeValue;
+
     editEmployee(k){
         this.model.name = this.employees[k].name;
         this.model.position = this.employees[k].position;
+        this.model.id = this.employees[k].id;
         this.employeeValue = k;
-
     };
-
+    
     updateEmployee(){
         console.log('update');
         let k = this.employeeValue;
@@ -63,9 +59,15 @@ export class AppComponent implements OnInit  {
         for (let i=0; i<len; i++){
             if (i===k){
                 this.employees[i] = this.model;
-                this.model = {};
             }
         }
+        console.log(this.model);
+        this.employeeService.updateEmployee(this.model)
+            .subscribe(
+                () => console.log('Sucess'),
+                error => console.error(error)
+            );
+        this.model = {};
         this.msg = "Successfully updated";
     };
 
@@ -74,5 +76,12 @@ export class AppComponent implements OnInit  {
     }
 
     ngOnInit(){
+        //Get the 
+        this.employeeService.getEmployees()
+        .subscribe(
+            employees => this.employees = employees,
+            error => console.error(error)
+        );
+
     };
 }
