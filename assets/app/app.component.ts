@@ -13,6 +13,7 @@ import { EmployeeService } from "./employee.service";
 export class AppComponent implements OnInit  {
     title = 'Angular 2 and Mongo DB';
 
+
     constructor(private employeeService: EmployeeService){ }
 
     employees: Employee[] = [];
@@ -21,15 +22,13 @@ export class AppComponent implements OnInit  {
     msg:any="";
     
     addEmployee(){
-
-        const employee = new Employee(this.model.name,this.model.position,'');
+        const employee = new Employee(this.model.name,this.model.email,this.model.position,'');
         this.employees.push(employee);
         this.employeeService.saveEmployees(employee)
             .subscribe(
                 () => console.log('Sucess'),
                 error => console.error(error)
             );
-            
         this.msg = "Successfully added";
     };
 
@@ -46,6 +45,7 @@ export class AppComponent implements OnInit  {
     editEmployee(k){
         this.model.name = this.employees[k].name;
         this.model.position = this.employees[k].position;
+        this.model.email = this.employees[k].email;
         this.model.id = this.employees[k].id;
         this.employeeValue = k;
     };

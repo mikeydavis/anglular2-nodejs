@@ -26,7 +26,8 @@ router.post('/employee', function(req, res, next){
     
     var employee = new Employee({
         name: req.body.name,
-        position: req.body.position
+        position: req.body.position,
+        email: req.body.email
     });
 
     employee.save(function(err,result){
@@ -48,7 +49,8 @@ router.post('/employeeupdate',function(req,res,next){
     {
         _id: req.body.id,
         name: req.body.name,
-        position: req.body.position
+        position: req.body.position,
+        email: req.body.email
     });
 
     employee.update(employee,function(err,data){

@@ -8,7 +8,9 @@ var mongoose = require('mongoose');
 var appRoutes = require('./routes/app');
 
 var app = express();
-mongoose.connect('localhost:27017/node-angular2');
+//mongoose.connect('localhost:27017/node-angular2');
+mongoose.connect('mongodb://admin:angular123@ds143131.mlab.com:43131/ng-employee');
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

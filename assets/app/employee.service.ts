@@ -20,7 +20,7 @@ export class EmployeeService{
             let employee;
             for (let element of extracted.data){
                     
-                employee = new Employee(element.name,element.position,element._id);
+                employee = new Employee(element.name,element.email,element.position,element.id);
                 msgArray.push(employee);
             }
             console.log(msgArray);
@@ -55,5 +55,4 @@ export class EmployeeService{
           });
     });
   }
-
 }

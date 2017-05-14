@@ -1,7 +1,13 @@
 "use strict";
 var Employee = (function () {
-    function Employee(name, position, id) {
+    function Employee(name, email, 
+        //public dob: string,
+        //public department: string,
+        //public gender: string,
+        //public age: string,
+        position, id) {
         this.name = name;
+        this.email = email;
         this.position = position;
         this.id = id;
     }
@@ -9,4 +15,4 @@ var Employee = (function () {
 }());
 exports.Employee = Employee;
 
-//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImVtcGxveWVlLm1vZGVsLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQTtJQUNJLGtCQUNXLElBQVksRUFDWixRQUFnQixFQUNoQixFQUFVO1FBRlYsU0FBSSxHQUFKLElBQUksQ0FBUTtRQUNaLGFBQVEsR0FBUixRQUFRLENBQVE7UUFDaEIsT0FBRSxHQUFGLEVBQUUsQ0FBUTtJQUNuQixDQUFDO0lBQ1AsZUFBQztBQUFELENBTkEsQUFNQyxJQUFBO0FBTlksZ0JBQVEsV0FNcEIsQ0FBQSIsImZpbGUiOiJlbXBsb3llZS5tb2RlbC5qcyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBjbGFzcyBFbXBsb3llZXtcbiAgICBjb25zdHJ1Y3RvcihcbiAgICAgICAgcHVibGljIG5hbWU6IHN0cmluZyxcbiAgICAgICAgcHVibGljIHBvc2l0aW9uOiBzdHJpbmcsXG4gICAgICAgIHB1YmxpYyBpZDogc3RyaW5nXG4gICAgKXt9XG59Il19
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImVtcGxveWVlLm1vZGVsLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQTtJQUNJLGtCQUNXLElBQVksRUFDWixLQUFZO1FBQ25CLHFCQUFxQjtRQUNyQiw0QkFBNEI7UUFDNUIsd0JBQXdCO1FBQ3hCLHFCQUFxQjtRQUNkLFFBQWdCLEVBQ2hCLEVBQVU7UUFQVixTQUFJLEdBQUosSUFBSSxDQUFRO1FBQ1osVUFBSyxHQUFMLEtBQUssQ0FBTztRQUtaLGFBQVEsR0FBUixRQUFRLENBQVE7UUFDaEIsT0FBRSxHQUFGLEVBQUUsQ0FBUTtJQUNuQixDQUFDO0lBQ1AsZUFBQztBQUFELENBWEEsQUFXQyxJQUFBO0FBWFksZ0JBQVEsV0FXcEIsQ0FBQSIsImZpbGUiOiJlbXBsb3llZS5tb2RlbC5qcyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBjbGFzcyBFbXBsb3llZXtcbiAgICBjb25zdHJ1Y3RvcihcbiAgICAgICAgcHVibGljIG5hbWU6IHN0cmluZyxcbiAgICAgICAgcHVibGljIGVtYWlsOnN0cmluZyxcbiAgICAgICAgLy9wdWJsaWMgZG9iOiBzdHJpbmcsXG4gICAgICAgIC8vcHVibGljIGRlcGFydG1lbnQ6IHN0cmluZyxcbiAgICAgICAgLy9wdWJsaWMgZ2VuZGVyOiBzdHJpbmcsXG4gICAgICAgIC8vcHVibGljIGFnZTogc3RyaW5nLFxuICAgICAgICBwdWJsaWMgcG9zaXRpb246IHN0cmluZyxcbiAgICAgICAgcHVibGljIGlkOiBzdHJpbmdcbiAgICApe31cbn0iXX0=
